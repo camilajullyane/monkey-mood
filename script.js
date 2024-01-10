@@ -1,4 +1,7 @@
+const descricao = document.getElementById('descricao');
+const imagem = document.getElementById('img');
 const macaco = {
+    macaco0: 'Macaco Estudioso',
     macaco1: 'Macaco Chato',
     macaco2: 'Macaco Despirocado',
     macaco3: 'Macaco Toquinho',
@@ -18,13 +21,12 @@ const macaco = {
     macaco17: 'Macaco Trouxa',
     macaco18: 'Macaco Rabugento',
     macaco19: 'Macaco Fofoqueiro',
-    macaco20: 'Macaco Desoline'
+    macaco20: 'Macaco Desonline'
 }
-const decricao = 
-const imagem = documento.getElementById("img");
 
-const sortearMacaco = () => {
+function sortearMacaco() {
     let num = Math.floor(Math.random() * 20)
-
-
+    console.log(num)
+    imagem.src = `images/macaco${num}.webp`
+    descricao.innerHTML = macaco[`macaco${num}`]
 }
